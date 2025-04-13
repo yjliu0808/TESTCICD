@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        githubPush()   // 👈 加上这一段
+    }
+
     stages {
         stage('Triggered') {
             steps {
